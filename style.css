@@ -1,0 +1,73 @@
+.layout {
+  background-color: #DBDBDB;
+  height: 100%;
+}
+
+.ash {
+  background-image: url("img/ash.png");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 650px;
+  background-position: bottom right;
+  position: relative;
+  width: 900px;
+}
+
+.full-page {
+  height: 100%;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+  padding-top: 10%;
+}
+
+.cup {
+  position: absolute;
+  bottom: 576px;
+  left: 326px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("img/cup.png");
+  height: 150px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.cup:hover {
+  background-image: url("img/cup_light.png");
+}
+
+.address, .info, .phone {
+  font-size: 24px;
+}
+
+.title {
+  color: #8b5ba3;
+  font-size: 32px;
+}
+
+.wooden, .phone {
+  font-family: serif;
+}
+
+.top-phrase, .shop {
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.top-phrase {
+  background-image: url("img/top_phrase.png");
+}
+
+.map {
+  margin: auto;
+  width: 500px;
+}
+
+.shop {
+  background-image: url("img/shop.png");
+}
