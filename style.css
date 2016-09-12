@@ -13,16 +13,6 @@
   width: 900px;
 }
 
-.full-page {
-  height: 100%;
-  width: 100%;
-}
-
-.text-center {
-  text-align: center;
-  padding-top: 10%;
-}
-
 .cup {
   position: absolute;
   bottom: 576px;
@@ -33,6 +23,16 @@
   height: 150px;
   width: 200px;
   cursor: pointer;
+}
+
+.full-page {
+  height: 100%;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+  padding-top: 10%;
 }
 
 .cup:hover {
@@ -70,4 +70,113 @@
 
 .shop {
   background-image: url("img/shop.png");
+}
+
+.heading-sm {
+  display: none;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.find-us {
+  background-image: url("img/find.png");
+  height: 60px;
+  width: 280px;
+  background-repeat: no-repeat;
+}
+
+.find-us-wrapper {
+  position: absolute;
+  right: 15px;
+  top: 80%;
+}
+
+
+.scroll-down {
+  margin: auto;
+  display: none;
+  width: 64px;
+  height: 64px;
+  border: 4px solid #2C6DB5;
+  background-size: 14px auto;
+  background-color: #FFCB06;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.scroll-down:before {
+  position: absolute;
+  top: calc(50% - 14px);
+  left: calc(50% - 11px);
+  transform: rotate(-45deg);
+  display: block;
+  width: 25px;
+  height: 25px;
+  content: "";
+  border: 2px solid #2C6DB5;
+  border-width: 0px 0 6px 6px;
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 1600px) {
+  .ash {
+    width: 640px;
+    background-size: 550px;
+  }
+
+  .cup {
+    bottom: 464px;
+    left: 150px;
+    height: 150px;
+    width: 138px;
+  }
+}
+
+@media (max-width: 991px) {
+  .ash {
+    width: 100%;
+    background-size: 550px;
+    background-position: bottom left;
+  }
+
+  .cup {
+    left: 65px;
+  }
+
+  .xs-full-page {
+    height: 100%;
+  }
+
+  .scroll-down {
+    display: block;
+  }
+
+  .heading-sm {
+    display: block;
+  }
 }
