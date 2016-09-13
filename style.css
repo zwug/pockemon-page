@@ -32,20 +32,27 @@
 
 .text-center {
   text-align: center;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 .cup:hover {
   background-image: url("img/cup_light.png");
 }
 
-.address, .info, .phone {
-  font-size: 24px;
+.info, .phone {
+  font-size: 20px;
+  line-height: 10px;
+}
+
+.address {
+  font-size: 18px;
+  line-height: 14px;
 }
 
 .title {
   color: #8b5ba3;
   font-size: 32px;
+  line-height: 10px;
 }
 
 .wooden, .phone {
@@ -65,7 +72,9 @@
 
 .map {
   margin: auto;
-  width: 500px;
+  padding: 0 30px;
+  width: 100%;
+  max-width: 700px;
 }
 
 .shop {
@@ -157,7 +166,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   .ash {
     width: 100%;
     background-size: 550px;
@@ -178,5 +187,74 @@
 
   .heading-sm {
     display: block;
+  }
+}
+
+.xs-heading {
+  background-image: url("img/xs-top.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 140px;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .ash {
+    width: 100%;
+    height: 180px;
+    background-size: contain;;
+    background-position: center;
+  }
+
+  .address {
+    font-size: 14px;
+    line-height: 12px;
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 10px;
+  }
+
+  .info, .phone {
+    font-size: 14px;
+    line-height: 10px;
+  }
+
+  .cup {
+    display: none;
+  }
+
+  .scroll-down {
+    display: block;
+  }
+
+  .heading-sm {
+    display: block;
+  }
+
+  .find-us-wrapper {
+    position: absolute;
+    right: inherit;
+    width: 100%;
+    top: auto;
+    left: 0;
+    bottom: 15px;
+  }
+
+  .find-us {
+    margin: auto;
+    height: 40px;
+    width: 150px;
+    background-size: contain;
+  }
+
+  .map {
+    padding: 0 10px;
+  }
+
+  .xs-full-page {
+    padding-top: 20px;
   }
 }
