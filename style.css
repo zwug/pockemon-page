@@ -94,6 +94,15 @@
   background-repeat: no-repeat;
 }
 
+.back {
+  background-image: url("img/back.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30px;
+  width: 60px;
+  margin: auto;
+}
+
 .find-us-wrapper {
   position: absolute;
   right: 15px;
@@ -101,7 +110,7 @@
 }
 
 
-.scroll-down {
+.scroll-down, .scroll-up {
   margin: auto;
   display: none;
   width: 64px;
@@ -117,7 +126,7 @@
   transition: all .2s ease-in;
 }
 
-.scroll-down:before {
+.scroll-down:before, .scroll-up:before {
   position: absolute;
   top: calc(50% - 14px);
   left: calc(50% - 11px);
@@ -128,6 +137,10 @@
   content: "";
   border: 2px solid #2C6DB5;
   border-width: 0px 0 6px 6px;
+}
+
+.scroll-up::before {
+  transform: rotate(135deg);
 }
 
 @keyframes bounce {
@@ -181,7 +194,7 @@
     height: 100%;
   }
 
-  .scroll-down {
+  .scroll-down, .scrol-up {
     display: block;
   }
 
@@ -226,7 +239,7 @@
     display: none;
   }
 
-  .scroll-down {
+  .scroll-down, .scroll-up {
     display: block;
   }
 
