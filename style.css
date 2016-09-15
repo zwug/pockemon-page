@@ -13,16 +13,39 @@
   width: 900px;
 }
 
-.cup {
+.cup, .ribbon, .cap {
   position: absolute;
   bottom: 576px;
   left: 326px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("img/cup.png");
+  background-image: none;
   height: 150px;
   width: 200px;
   cursor: pointer;
+}
+
+.cap {
+  bottom: 541px;
+  left: 542px;
+  width: 254px;
+  height: 194px;
+}
+
+.ribbon {
+  width: 61px;
+  height: 66px;
+  bottom: 310px;
+  left: 541px;
+  transform: rotate(-10deg);
+}
+
+.cap:hover {
+  background-image: url("img/cap.png");
+}
+
+.ribbon:hover {
+  background-image: url("img/ribbon.png");
 }
 
 .full-page {
@@ -177,6 +200,20 @@
     height: 150px;
     width: 138px;
   }
+
+  .cap {
+    bottom: 462px;
+    left: 337px;
+    width: 220px;
+    height: 160px;
+  }
+
+  .ribbon {
+    width: 55px;
+    height: 60px;
+    bottom: 260px;
+    left: 334px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -190,11 +227,25 @@
     left: 65px;
   }
 
+  .cap {
+    bottom: 462px;
+    left: 247px;
+    width: 220px;
+    height: 160px;
+  }
+
+  .ribbon {
+    width: 55px;
+    height: 60px;
+    bottom: 260px;
+    left: 244px;
+  }
+
   .xs-full-page {
     height: 100%;
   }
 
-  .scroll-down, .scrol-up {
+  .scroll-down, .scroll-up {
     display: block;
   }
 
@@ -235,8 +286,8 @@
     line-height: 10px;
   }
 
-  .cup {
-    display: none;
+  .cup:hover, .cap:hover, .ribbon:hover {
+    background-image: none;
   }
 
   .scroll-down, .scroll-up {
