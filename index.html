@@ -17,9 +17,9 @@
             <div class="top-phrase"></div>
             <div class="shop"></div>
           </div>
-          <div class="cup"></div>
-          <div class="cap"></div>
-          <div class="ribbon"></div>
+          <div class="cup modal-toggle"></div>
+          <div class="cap modal-toggle"></div>
+          <div class="ribbon modal-toggle"></div>
         </div>
         <div class="hidden-lg find-us-wrapper">
           <div class="find-us"></div>
@@ -57,8 +57,27 @@
         </div>
       </div>
     </div>
+    <div id="static-modal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <p>One fine body…</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
     <script>
       smoothScroll.init();
     </script>
+    <script type="text/javascript" src="modal.js"></script>
+    <script type="text/javascript" src="index.js"></script>
   </body>
 </html>
