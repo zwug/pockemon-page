@@ -78,6 +78,15 @@
   line-height: 10px;
 }
 
+.wooden {
+  color: #8b5ba3;
+  text-decoration: none;
+}
+
+.wooden:hover {
+  color: #3F0F57;
+}
+
 .wooden, .phone {
   font-family: serif;
 }
@@ -335,4 +344,24 @@
 .modal-backdrop.fade.in {
   opacity: .5;
   filter: alpha(opacity=50);
+}
+
+.good-img {
+  max-width: 150px;
+  border-radius: 5px;
+}
+
+.good-price {
+  text-align: center;
+}
+
+.good {
+  margin-bottom: 10px;
+}
+
+.modal-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.ico">
     <script type="text/javascript" src="smoothscroll.js"></script>
   </head>
   <body>
@@ -17,9 +18,9 @@
             <div class="top-phrase"></div>
             <div class="shop"></div>
           </div>
-          <div class="cup modal-toggle"></div>
-          <div class="cap modal-toggle"></div>
-          <div class="ribbon modal-toggle"></div>
+          <div class="cup" id="cup" data-type="cups"></div>
+          <div class="cap" id="cap" data-type="caps"></div>
+          <div class="ribbon" id="ribbon" data-type="ribbons"></div>
         </div>
         <div class="hidden-lg find-us-wrapper">
           <div class="find-us"></div>
@@ -43,7 +44,7 @@
             Милютинский пер. дом 6 стр. 1
           </p>
           <p class="title">
-            Антикафе <i class="wooden">Wooden door</i>
+            Антикафе <a class="wooden" href="http://wdndoor.com/">Wooden door</a>
           </p>
           <p class="info">
             Ежедневно с 13:00 до 23:00
@@ -61,15 +62,14 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <h4 class="modal-title">Modal title</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">×</button>
+            <h4 class="modal-title">Магазинчик Эша</h4>
           </div>
-          <div class="modal-body">
+          <div class="modal-body" id="modal-body">
             <p>One fine body…</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
