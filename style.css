@@ -19,10 +19,11 @@
   left: 326px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: none;
   height: 150px;
   width: 200px;
   cursor: pointer;
+  opacity: .4;
+  transition: opacity .3s ease;
 }
 
 .cap {
@@ -40,12 +41,28 @@
   transform: rotate(-10deg);
 }
 
-.cap:hover {
+.cap{
   background-image: url("img/cap.png");
 }
 
-.ribbon:hover {
+.ribbon{
   background-image: url("img/ribbon.png");
+}
+
+.cup{
+  background-image: url("img/cup_light.png");
+}
+
+.cap:hover {
+  opacity: 1;
+}
+
+.ribbon:hover {
+  opacity: 1;
+}
+
+.cup:hover {
+  opacity: 1;
 }
 
 .full-page {
@@ -56,10 +73,6 @@
 .text-center {
   text-align: center;
   padding-top: 5%;
-}
-
-.cup:hover {
-  background-image: url("img/cup_light.png");
 }
 
 .info, .phone {
@@ -205,7 +218,7 @@
 
   .cup {
     bottom: 464px;
-    left: 150px;
+    left: 153px;
     height: 150px;
     width: 138px;
   }
