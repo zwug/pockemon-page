@@ -1,23 +1,16 @@
-document.querySelector('#cup').addEventListener('click', onItemClick);
-document.querySelector('#cap').addEventListener('click', onItemClick);
-document.querySelector('#ribbon').addEventListener('click', onItemClick);
+document.querySelector('#ash').addEventListener('click', onItemClick);
 
 function onItemClick(evt) {
   var modalContent = document.getElementById('modal-body');
   modalContent.innerHTML = '';
-  goods[evt.currentTarget.dataset.type].forEach(function(good) {
-    var goodElement = createElWithClass('div', 'good');
-    var imgElement = createElWithClass('img', 'good-img');
-    var priceElement = createElWithClass('div', 'good-price');
+  if (evt.target.id === 'ash') {
+    for (good in goods) {
+      createCatalogFor(modalContent, good);
+    }
+  } else {
+    createCatalogFor(modalContent, evt.target.dataset.type);
+  }
 
-    imgElement.setAttribute('src', 'img/' + good.src);
-    priceElement.innerHTML = good.price + ' р.'
-
-    goodElement.appendChild(imgElement);
-    goodElement.appendChild(priceElement);
-
-    modalContent.appendChild(goodElement);
-  });
   if (window.modal) {
     window.modal.show();
   } else {
@@ -66,6 +59,34 @@ var goods = {
     src: 'ribbon_yellow.jpg'
   }]
 };
+
+var xsCatalog = document.getElementById('catalog');
+if (!isHidden(xsCatalog)) {
+  for (good in goods) {
+    createCatalogFor(xsCatalog, good);
+  }
+}
+
+function createCatalogFor(el, opt_type) {
+  goods[opt_type].forEach(function(good) {
+    var goodElement = createElWithClass('div', 'good');
+    var imgElement = createElWithClass('img', 'good-img');
+    var priceElement = createElWithClass('div', 'good-price');
+
+    imgElement.setAttribute('src', 'img/' + good.src);
+    priceElement.innerHTML = good.price + ' р.'
+
+    goodElement.appendChild(imgElement);
+    goodElement.appendChild(priceElement);
+
+    el.appendChild(goodElement);
+  });
+}
+
+function isHidden(el) {
+  var style = window.getComputedStyle(el);
+  return (style.display === 'none');
+}
 
 function createElWithClass(type, className) {
   var el = document.createElement(type);
